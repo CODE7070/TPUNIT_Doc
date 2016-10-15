@@ -11,3 +11,47 @@
 
 # 例子
 下面给出一个例子，用于测试session的两个方法：
+~~~
+<?php
+namespace app\index\controller;
+use think\Session;//注意引入Session
+class Index
+{
+	//添加一个值
+	public function addOneValue(){
+		Session::clear();
+		Session::set('value1',1);
+	}
+	//添加多个值
+	public function addTwoValue(){
+		Session::clear();
+		Session::set('value2',2);
+		Session::set('value3',3);
+	}
+}
+~~~
+
+针对上面的这段代码，我们可以在tests目录下增加一个IndexTest.php对其进行测试:
+~~~
+
+<?php
+namespace tests;
+//针对Index控制器
+class IndexTest extends TestCase
+{
+	public function testAddOneValue(){
+		$response=$this->visit('/index/index/addOneValue');
+		$response->assertSessionHas('value1');
+		$response->assertSessionHas('value1',1);
+	}
+	
+	public function testAddTwoValue(){
+		$sessData=array(
+		'value2'=>2,
+		'value3'=>3
+		);
+		$response=$this->visit('/index/index/addTwoValue');
+		$response->assertSessionHas($sessData);
+	}
+}
+~~~
