@@ -21,5 +21,7 @@
 `$this->visit('/index/index/index')->seeAction('index');`
 
 # seeStatusCode
+用于断言response的状态码。
+
 # seeHeader
 # seeCookie
