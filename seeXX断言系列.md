@@ -19,6 +19,7 @@
 # seeAction
 用于断言请求中的操作。
 `$this->visit('/index/index/index')->seeAction('index');`
+
 # seeStatusCode
 # seeHeader
 # seeCookie
