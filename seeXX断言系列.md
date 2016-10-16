@@ -5,8 +5,11 @@
 # notSee
 本方法使用了see，并且设置see的第二个参数为真。
 # seeJson
+内部使用seeJsonContains，用于断言某个json是否在结果中
 # seeJsonEquals
+断言json是否跟结果一直。
 # seeJsonContains
+断言某个json是否在结果中。
 # seeModule
 用于断言请求中的模块。
 `$this->visit('/index/index/index')->seeModule('index');`
@@ -24,4 +27,7 @@
 用于断言response的状态码。
 
 # seeHeader
+用于断言response的head部。
+
 # seeCookie
+用于断言Cookie中是否存在某个值。
