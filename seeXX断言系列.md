@@ -5,8 +5,11 @@
 
 @param string $text 欲查找的文本
 @param boolean $negate 非操作
+
 # notSee
 本方法使用了see，并且设置see的第二个参数为真。
+
+@param string $text 欲查找的文本
 
 # seeJson
 内部使用seeJsonContains，用于断言某个json是否在结果中
