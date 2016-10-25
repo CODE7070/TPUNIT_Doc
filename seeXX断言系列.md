@@ -7,9 +7,9 @@
 
 # seeJson
 内部使用seeJsonContains，用于断言某个json是否在结果中
-$data = null, $negate = false
-@param $data 期望的json
-@param $negate 非操作，为真时是期望$data不在结果中
+
+@param array $data 期望的json
+@param boolean $negate 非操作，为真时是期望$data不在结果中
 
 # seeJsonEquals
 断言json是否跟结果相等。
@@ -19,6 +19,10 @@ $data = null, $negate = false
 
 # seeJsonContains
 断言某个json是否在结果中。
+
+@param array $data 期望的与断言的json数据
+@param boolean $negate 非操作
+
 # seeModule
 用于断言请求中的模块。
 `$this->visit('/index/index/index')->seeModule('index');`
