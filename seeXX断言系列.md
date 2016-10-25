@@ -50,5 +50,11 @@
 # seeHeader
 用于断言response的head部。
 
+@param string $headerName 头部的某个项
+@param string $value 项值
+
 # seeCookie
 用于断言Cookie中是否存在某个值。
+
+@param string $cookieName cookie的某个项名
+@param string $value 项值
