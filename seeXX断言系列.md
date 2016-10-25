@@ -25,15 +25,21 @@
 
 # seeModule
 用于断言请求中的模块。
+
+@param string @module 欲断言的模块名字
 `$this->visit('/index/index/index')->seeModule('index');`
 
 # seeController
 用于断言请求中的控制器。
+
+@param string @controller 欲断言的控制器名字
 `$this->visit('/index/index/index')->seeController('Index');`
 >注意，控制器首字母是需要大写的。
 
 # seeAction
 用于断言请求中的操作。
+
+@param string @action 欲断言的操作名字
 `$this->visit('/index/index/index')->seeAction('index');`
 
 # seeStatusCode
