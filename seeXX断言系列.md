@@ -4,10 +4,19 @@
 接收两个参数，用于断言一个正则是否在结果中可以匹配。第二个参数是布尔值，当为假的时候断言第一个参数在结果中匹配。当为真的时候断言第一个参数不在结果中匹配。
 # notSee
 本方法使用了see，并且设置see的第二个参数为真。
+
 # seeJson
 内部使用seeJsonContains，用于断言某个json是否在结果中
+$data = null, $negate = false
+@param $data 期望的json
+@param $negate 非操作，为真时是期望$data不在结果中
+
 # seeJsonEquals
-断言json是否跟结果一直。
+断言json是否跟结果相等。
+@param array $data 传入一个数组，排序再转换成json
+
+其内部会将实际值转回成数组进行排序后再跟$data排序后转换成的json进行断言。
+
 # seeJsonContains
 断言某个json是否在结果中。
 # seeModule
