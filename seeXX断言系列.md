@@ -45,6 +45,8 @@
 # seeStatusCode
 用于断言response的状态码。
 
+@param int $status 状态码
+
 # seeHeader
 用于断言response的head部。
 
